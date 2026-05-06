@@ -1,19 +1,30 @@
+import { useState } from "react";
 import { ArrowDownRight, BookOpen, CheckCircle } from "lucide-react";
 import { sectionNav } from "../data/site.js";
 
 export default function Hero({ completedCount, moduleCount }) {
+  const [menuOpen, setMenuOpen] = useState(false);
   const progress = (completedCount / moduleCount) * 100;
 
   return (
     <header className="hero-section" id="top">
-      <nav className="top-nav" aria-label="Section navigation">
+      <nav className={`top-nav ${menuOpen ? "menu-open" : ""}`} aria-label="Section navigation">
         <a className="wordmark" href="#top">
           <img src={`${import.meta.env.BASE_URL}SY.png`} alt="" />
           <span>McK | Sherif Youssef</span>
         </a>
-        <div className="nav-links">
+        <button
+          className="menu-toggle"
+          type="button"
+          aria-expanded={menuOpen}
+          aria-controls="section-menu"
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          Menu
+        </button>
+        <div className="nav-links" id="section-menu">
           {sectionNav.map(([label, href]) => (
-            <a key={href} href={href}>{label}</a>
+            <a key={href} href={href} onClick={() => setMenuOpen(false)}>{label}</a>
           ))}
         </div>
       </nav>
