@@ -8,7 +8,7 @@ export default function Hero({ completedCount, moduleCount }) {
     <header className="hero-section" id="top">
       <nav className="top-nav" aria-label="Section navigation">
         <a className="wordmark" href="#top">
-          <img src="/SY.png" alt="" />
+          <img src={`${import.meta.env.BASE_URL}SY.png`} alt="" />
           <span>McK | Sherif Youssef</span>
         </a>
         <div className="nav-links">
