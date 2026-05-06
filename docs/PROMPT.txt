@@ -1,0 +1,111 @@
+Build a professional single-page website called "Professional Standards & Risk: Core Principles" that mimics McKinsey & Company's design language and covers the content areas of McKinsey's PSR (Professional Standards and Risk) training program. This is a knowledge reference and self-assessment site.
+Design Language (strict McKinsey aesthetic):
+
+Color palette: deep navy (#002744) as primary, white (#FFFFFF) as background, light gray (#F5F5F5) for section backgrounds, McKinsey blue (#0050AA) for accents and CTAs, black (#1A1A1A) for body text
+Typography: use Inter or IBM Plex Sans from Google Fonts. Headings bold and large. Body text clean and small. Heavy use of white space.
+No gradients, no shadows, no rounded corners (or very subtle 2px max). Everything sharp and geometric.
+Thin horizontal rules to separate sections
+Cards with a left colored border accent (navy or blue) instead of full card shadows
+Icons: use Lucide icons only, stroke style, never filled
+No animations except subtle fade-in on scroll
+Footer with "McKinsey & Company | Professional Standards & Risk" branding
+
+Page Structure:
+1. Hero Section
+
+Full width, white background
+Top left: small "McKinsey & Company" wordmark in navy, very small
+Large headline: "Professional Standards & Risk"
+Subtitle: "Annual Certification Program | Core Principles Reference"
+A thin navy horizontal rule below the subtitle
+A small progress indicator showing "3 of 7 modules completed" with a thin progress bar in navy
+
+2. What Is PSR Section
+
+Light gray background
+Left-aligned heading: "About This Program"
+Two column layout: left side is a short paragraph explaining PSR is McKinsey's firm-wide mandatory annual compliance and ethics training. Right side has 3 stat cards: "100% Completion Required", "Annual Recertification", "45,000+ Colleagues Globally"
+Stat cards are minimal: just a large bold number/text, a thin navy top border, and a label underneath
+
+3. Module Grid Section
+
+White background
+Heading: "Core Principles Modules"
+7 cards in a responsive grid (3 columns on desktop, 2 on tablet, 1 on mobile)
+Each card has: a Lucide icon, module title, 2-3 sentence description, and a status badge ("Completed" in green or "In Progress" in amber)
+The 7 modules are:
+
+Anti-Corruption & Anti-Bribery (Shield icon) — Never engaging in bribery or corruption. Interacting properly with government officials. Understanding the FCPA and UK Bribery Act.
+Conflicts of Interest (GitMerge icon) — Identifying, disclosing, and managing actual or potential conflicts. Protecting client confidentiality across engagements.
+Workplace Conduct & Anti-Harassment (Users icon) — Maintaining an inclusive, respectful, and caring meritocracy. Zero tolerance for harassment or discrimination.
+Information Security & Data Privacy (Lock icon) — Keeping confidential information secure during and after employment. Complying with GDPR, CCPA, and firm data handling policies.
+Human Rights & Labor Standards (Globe icon) — Upholding UN Global Compact principles. Prohibiting forced labor, child labor, and human trafficking across operations and supply chain.
+Trade Controls & Sanctions (AlertTriangle icon) — Abiding by all applicable trade controls, export restrictions, and sanctions regimes. Not engaging with prohibited entities or jurisdictions.
+Environmental Sustainability (Leaf icon) — Understanding McKinsey's net-zero commitments. Integrating ESG considerations into daily decisions and client work.
+
+
+Mark modules 1, 3, and 4 as "Completed" (green badge). The rest show "Pending" (gray badge).
+
+4. Key Obligations Section
+
+Navy (#002744) background, white text
+Heading: "Your Core Obligations as a McKinsey Colleague"
+Two column checklist layout using Lucide CheckCircle icons
+Items:
+
+Never offer, accept, or facilitate bribes or improper payments
+Disclose all actual and potential conflicts of interest immediately
+Protect all client confidential information at all times
+Complete annual PSR certification before the stated deadline
+Report suspected misconduct via Got a Concern? immediately
+Abide by all applicable trade controls and sanctions
+Maintain complete and accurate records at all times
+Treat all colleagues with dignity, respect, and inclusion
+
+
+
+5. Reporting & Escalation Section
+
+White background
+Heading: "How to Raise a Concern"
+Three horizontal steps with thin numbered circles:
+
+Identify — Recognize behavior that may violate Our Code, firm policy, or the law
+Report — Submit a report via "Got a Concern?", hosted by a confidential third-party provider. Anonymous reporting is available.
+Protection — McKinsey prohibits retaliation of any kind for good-faith reporting
+
+
+Below that: a subtle info box with navy left border: "The Professional Standards Committee (PSC) reviews all cases of alleged misconduct. Consequences range from performance downtick to separation from the firm."
+
+6. Self-Assessment Quiz Section
+
+Light gray background
+Heading: "Knowledge Check"
+Subheading: "Test your understanding of PSR core principles"
+5 multiple choice questions, one at a time, with Next button
+Questions:
+
+"A client offers you a luxury watch as thanks for your work on a project. What should you do?" — Options: Accept it graciously / Decline and report it to your manager / Accept if the value is under $100 / Ask a colleague what they would do — Correct: Decline and report
+"You realize you have a personal relationship with a senior leader at a company your team is now engaged with. What is your first step?" — Options: Do nothing unless asked / Immediately disclose the conflict to your engagement manager / Recuse yourself without telling anyone / Complete the project and disclose afterward — Correct: Immediately disclose
+"Which law governs US companies bribing foreign officials?" — Options: UK Bribery Act / GDPR / FCPA / Sarbanes-Oxley — Correct: FCPA
+"How frequently must McKinsey colleagues certify compliance with firm policies and complete PSR training?" — Options: Every 2 years / Once at onboarding / Annually / Every quarter — Correct: Annually
+"Where should concerns about Code violations be reported?" — Options: Directly to HR only / Got a Concern? platform / Your local office managing partner / LinkedIn — Correct: Got a Concern?
+
+
+After all 5: show a results card with score, a "Well done" or "Review recommended" message, and a navy CTA button: "Return to Modules"
+
+7. Certification Footer Banner
+
+Full-width navy bar
+Left side: "Annual PSR Certification" | "McKinsey & Company"
+Right side: a clean button "Complete Remaining Modules →" in white with navy border
+Very small text below: "Completion of all modules is mandatory. Certification deadline applies to all active colleagues globally."
+
+Technical requirements:
+
+React + Tailwind CSS
+Fully responsive (mobile, tablet, desktop)
+Quiz state managed with useState
+Progress bar in hero dynamically reflects completed module count
+Smooth scroll between sections
+No external APIs or backend needed
