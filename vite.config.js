@@ -2,6 +2,6 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  base: "/psrs-reference/",
+  base: process.env.VERCEL ? "/" : "/psrs-reference/",
   plugins: [react()],
 });
