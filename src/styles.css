@@ -1364,7 +1364,8 @@ footer {
     grid-template-columns: 1fr auto;
     gap: 12px;
     min-height: 0;
-    padding: 12px 16px;
+    padding: 8px 16px;
+    border-bottom: 0;
   }
 
   .wordmark {
@@ -1419,7 +1420,7 @@ footer {
   .hero-section {
     min-height: auto;
     display: block;
-    padding: 48px 0 56px;
+    padding: 30px 0 56px;
   }
 
   .hero-layout {
@@ -1587,7 +1588,7 @@ footer {
   }
 
   .hero-section {
-    padding-top: 40px;
+    padding-top: 24px;
   }
 
   .hero-copy > p:not(.hero-kicker) {
